@@ -23,8 +23,8 @@ import subprocess
 import tempfile
 from pathlib import Path
 
-INPUT  = "/Users/pedrambeigi/xPEDRAMx.github.io/assets/images/test.mov"
-OUTPUT = "/Users/pedrambeigi/xPEDRAMx.github.io/assets/images/test_processed.mp4"
+INPUT  = "/Users/pedrambeigi/pebeigi.github.io/assets/images/test.mov"
+OUTPUT = "/Users/pedrambeigi/pebeigi.github.io/assets/images/test_processed.mp4"
 
 # Target: exact website background #1b1035 (RGB 27,16,53) measured from screenshot.
 # Pre-compensated for yuv420p H.264 encoding drift (~R-3, G+1, B-4):
@@ -38,8 +38,8 @@ REPLACE_BLACK_THRESHOLD = 60
 # so 20 removes the background while keeping the brighter content.
 TRANSPARENT_BLACK_THRESHOLD = 20
 
-OUTPUT_WEBM = "/Users/pedrambeigi/xPEDRAMx.github.io/assets/images/test_transparent.webm"
-OUTPUT_GIF  = "/Users/pedrambeigi/xPEDRAMx.github.io/assets/images/test_transparent.gif"
+OUTPUT_WEBM = "/Users/pedrambeigi/pebeigi.github.io/assets/images/test_transparent.webm"
+OUTPUT_GIF  = "/Users/pedrambeigi/pebeigi.github.io/assets/images/test_transparent.gif"
 
 
 def replace_black_pixels(input_path: str, raw_output: str) -> None:

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-OUTPUT_PDF="/Users/pedrambeigi/xPEDRAMx.github.io/resume/resume.pdf"
+OUTPUT_PDF="/Users/pedrambeigi/pebeigi.github.io/resume/resume.pdf"
 
 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
   --headless=new \
@@ -9,4 +9,4 @@ OUTPUT_PDF="/Users/pedrambeigi/xPEDRAMx.github.io/resume/resume.pdf"
   --allow-file-access-from-files \
   --no-pdf-header-footer \
   --print-to-pdf="${OUTPUT_PDF}" \
-  "file:///Users/pedrambeigi/xPEDRAMx.github.io/resume/index.html"
+  "file:///Users/pedrambeigi/pebeigi.github.io/resume/index.html"

@@ -1,2 +1,2 @@
-# xPEDRAMx.github.io
+# pebeigi.github.io
 Personal Portfolio
