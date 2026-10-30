@@ -1,0 +1,297 @@
+\begin{thebibliography}{10}
+
+\bibitem{petrov2026simulation}
+T.~Petrov, W.~Sleiman, P.~\textbf{Beigi}, P.~Po{\v{c}}ta, L.~Buzna, and
+  S.~Hamdar, ``Simulation of vehicle-to-pedestrian communication for
+  development of novel c-its services for vulnerable road users,'' {\em
+  Transportation Research Procedia}, vol.~93, pp.~674--679, 2026.
+
+\bibitem{sleiman2026diffusion}
+W.~Sleiman, M.~Haque, M.~S. Amin, P.~\textbf{Beigi}, M.~Khoueiry, S.~Kang, and
+  S.~Hamdar, ``Diffusion process-based model for network trajectory
+  propagation: Formulation, data mining, and cross-comparative analysis,'' {\em
+  IEEE Transactions on Intelligent Transportation Systems~(\venue{vTITS}{IEEE
+  T-ITS})}, 2026.
+
+\bibitem{Bafandkar2026learningtrr}
+S.~Bafandkar, P.~\textbf{Beigi}, N.~Li, J.~Houdros, S.~H. Hamdar, H.~S.
+  Mahmassani, and A.~Talebpour, ``{Learning From Real-World Trajectories: A
+  Hybrid Genetic Algorithm And Reinforcement Learning Approach For Vulnerable
+  Road User Model Calibration},'' {\em Transportation Research
+  Record~(\venue{vTRB}{TRR})}, 2026.
+\newblock Accepted.
+
+\bibitem{sleiman2025percolation}
+W.~Sleiman, P.~\textbf{Beigi}, and S.~Hamdar, ``{Percolation-Based Cloud
+  Computing Framework for Network Reliability Assessment},'' in {\em IEEE 4th
+  Int. Conf. on Computing and Machine Intelligence~(\venue{vICMI}{IEEE ICMI})},
+  pp.~1--7, IEEE, 2025.
+
+\bibitem{beigi2025impact}
+P.~\textbf{Beigi}, S.~Hamdar, A.~Talebpour, and H.~Mahmassani, ``{Impact of
+  Heavy Vehicles on Headway Distributions: Study Using Naturalistic Urban
+  Expressway Trajectories},'' {\em Transportation Research
+  Record~(\venue{vTRB}{TRR})}, pp.~1--15, 2025.
+
+\bibitem{Pan25092025}
+D.~Pan, P.~\textbf{Beigi}, W.~Daamen, V.~Knoop, A.~Talebpour, and S.~Hamdar,
+  ``{Exploring Voronoi-based area-weighted network fundamental diagrams in
+  shared urban spaces},'' {\em Transportmetrica A: Transport Science},
+  pp.~1--27, 2025.
+
+\bibitem{sleiman2025impact}
+W.~Sleiman, P.~\textbf{Beigi}, T.~Petrov, L.~Buzna, P.~Pocta, and S.~Hamdar,
+  ``{Impact of Pedestrian and Vehicle Connectivity on Intersection Performance:
+  A High-Fidelity Simulation with Deep Reinforcement Learning Control},'' {\em
+  Transportation Research Record~(\venue{vTRB}{TRR})}, pp.~1--15, 2025.
+
+\bibitem{ammourah2024introduction}
+R.~Ammourah, P.~\textbf{Beigi}, B.~Fan, S.~H. Hamdar, {\em et~al.},
+  ``{Introduction to the Third Generation Simulation Dataset: Data Collection
+  and Trajectory Extraction},'' {\em Transportation Research
+  Record~(\venue{vTRB}{TRR})}, pp.~241--257, 2024.
+
+\bibitem{rad2024predicting}
+F.~M. Rad, M.~Beygi, P.~\textbf{Beigi}, and A.~Samimi, ``{Predicting Freight
+  Attraction with MLR and GWR using VIIRS Satellite Nighttime Imagery Data},''
+  {\em Advances in Transportation Studies}, vol.~64, 2024.
+
+\bibitem{faghihinejad2022framework}
+F.~Faghihinejad, M.~Fard, A.~Roshanghalb, and P.~\textbf{Beigi}, ``A framework
+  to assess the correlation between transportation infrastructure access and
+  economics,'' {\em Mathematical Problems in Engineering}, vol.~2022, no.~1,
+  2022.
+
+\bibitem{beigi2022bike}
+P.~\textbf{Beigi}, M.~Haque, M.~S. Rajabi, and S.~Hamdar, ``Bike share’s
+  impact on covid-19 transmission and bike share’s responses to covid-19,''
+  in {\em Canadian Society of Civil Engineering Annual
+  Conference~(\venue{vCSCE}{CSCE})}, pp.~723--737, Springer, 2022.
+
+\bibitem{beigi2022station}
+P.~\textbf{Beigi}, M.~Khoueiry, M.~S. Rajabi, and S.~Hamdar, ``Station
+  reallocation and rebalancing strategy for bike-sharing systems,'' in {\em
+  Canadian Society of Civil Engineering Annual
+  Conference~(\venue{vCSCE}{CSCE})}, pp.~621--630, Springer, 2022.
+
+\bibitem{beigi2022overview}
+P.~\textbf{Beigi}, M.~S. Rajabi, and S.~Aghakhani, ``{An Overview of Drone
+  Energy Consumption Factors and Models},'' {\em Handbook of smart energy
+  systems}, pp.~1--20, 2022 Springer Nature\textsuperscript{©}.
+
+\bibitem{rajabi2023drone}
+M.~S. Rajabi, P.~\textbf{Beigi}, and S.~Aghakhani, ``{Drone Delivery Systems
+  and Energy Management: A Review and Future Trends},'' {\em Handbook of smart
+  energy systems}, pp.~1--19, 2023 Springer Nature\textsuperscript{©}.
+
+\bibitem{Beigi2026MotionCommunicationTITS}
+P.~\textbf{Beigi}, W.~Sleiman, A.~Khakpour, M.~Khoueiry, and S.~Hamdar,
+  ``{Motion as Communication: Plan-Conditioned Diffusion World Models for
+  Negotiation at Unprotected Conflict Points}.'' Manuscript under review at
+  IEEE Transactions on Intelligent Transportation Systems~(\venue{vTITS}{IEEE
+  T-ITS}), 2026.
+
+\bibitem{Beigi2026UtilityGuidedResidual}
+P.~\textbf{Beigi}, A.~Talebpour, and S.~H. Hamdar, ``{Utility-Guided Residual
+  Multi-Agent Reinforcement Learning for Closed-Loop Interactive Driving}.''
+  Manuscript under review at IEEE Transactions on Intelligent Transportation
+  Systems~(\venue{vTITS}{IEEE T-ITS}), 2026.
+
+\bibitem{Khoueiry2026WeakLane}
+M.~S. Khoueiry, P.~\textbf{Beigi}, and S.~H. Hamdar, ``{Toward Autonomous
+  Driving in Weak-Lane Freeway Traffic: A Naturalistic Trajectory Dataset and
+  Comparative Evaluation of Interaction Models}.'' Manuscript under review at
+  Transportation Research Part C: Emerging Technologies~(\venue{vTRC}{TR-C}),
+  2026.
+
+\bibitem{Khakpour2026EmpiricalGames}
+A.~Khakpour, N.~Li, P.~\textbf{Beigi}, and Y.~M. Nie, ``{Empirically Calibrated
+  Differential Games for Simulating Driver Interactions},'' 2026.
+\newblock Manuscript under review at IEEE Transactions on Intelligent
+  Transportation Systems~(\venue{vTITS}{IEEE T-ITS}); Oral at
+  \venue{vINFORMS}{INFORMS}.
+
+\bibitem{Hegde2026CompleteStreet}
+S.~J. Hegde, A.~Khakpour, P.~\textbf{Beigi}, Y.~M. Nie, and H.~S. Mahmassani,
+  ``{Complete Street Design informed by Multi-Agent Simulation},'' 2026.
+\newblock Under review at Transportation Research Record~(\venue{vTRB}{TRR}).
+
+\bibitem{sleiman2026deep}
+W.~Sleiman, P.~\textbf{Beigi}, T.~Petrov, L.~Buzna, P.~Pocta, and S.~Hamdar,
+  ``{Deep Reinforcement Learning Under Partial Observability: Co-Simulation and
+  Penetration-Aware Policy Learning for Traffic Signal Control},'' in {\em IEEE
+  Vehicular Technology Conference~(\venue{vVTC}{IEEE VTC}) - Under Review},
+  2026.
+
+\bibitem{Beigi2026NGMTRB2027}
+P.~*\textbf{Beigi}, N.~Li, S.~Bafandkar, J.~Hourdos, A.~Talebpour, and S.~H.
+  Hamdar, ``{{NGM}: An Open, Modular, and Extensible Framework for
+  Trajectory-Calibrated Microsimulation of Mixed Human, Automated, and
+  Connected Traffic}.'' Submitted to the 2027 Transportation Research Board
+  (\venue{vTRB}{TRB}) Annual Meeting, Presentation and Publication track; under
+  review; manuscript TRBAM-27-06429, 2026.
+
+\bibitem{Beigi2026OperationsSafetyTRB2027}
+P.~*\textbf{Beigi}, N.~Li, J.~Hourdos, A.~Talebpour, and S.~H. Hamdar,
+  ``{Operations and Safety Impacts of Connected and Automated Vehicles under
+  Imperfect {V2V}, Mixed Fleets, and Intersection Conflict Exposure}.''
+  Submitted to the 2027 Transportation Research Board (\venue{vTRB}{TRB})
+  Annual Meeting, Presentation track; under review; manuscript TRBAM-27-06079,
+  2026.
+
+\bibitem{Hegde2026CompleteStreetTRB2027}
+S.~J. *Hegde, A.~Khakpour, P.~\textbf{Beigi}, Y.~M. Nie, and H.~S. Mahmassani,
+  ``{Complete Street Design informed by Multi-Agent Simulation}.'' Submitted to
+  the 2027 Transportation Research Board (\venue{vTRB}{TRB}) Annual Meeting,
+  Presentation and Publication track; under review; manuscript TRBAM-27-04884,
+  2026.
+
+\bibitem{Khakpour2026GameTheoreticTRB2027}
+A.~*Khakpour, N.~Li, P.~\textbf{Beigi}, H.~Kobeissi, and Y.~M. Nie, ``{A
+  Game-Theoretic Approach to Modeling Human-Driven Vehicle Interactions at
+  Urban Intersections}.'' Submitted to the 2027 Transportation Research Board
+  (\venue{vTRB}{TRB}) Annual Meeting, Presentation track; under review;
+  manuscript TRBAM-27-04886, 2026.
+
+\bibitem{Rashidi2026InteractionAwareTRB2027}
+M.~E. *Rashidi, W.~Sleiman, P.~\textbf{Beigi}, M.~S. Khoueiry, W.~Zhang, and
+  S.~H. Hamdar, ``{An Interaction-Aware Kinematic-Historic Transition Model for
+  Weak-Lane Microscopic Traffic Simulation}.'' Submitted to the 2027
+  Transportation Research Board (\venue{vTRB}{TRB}) Annual Meeting,
+  Presentation track; under review; manuscript TRBAM-27-03861, 2026.
+
+\bibitem{Beigi2026MotionCommunication}
+P.~*\textbf{Beigi}, W.~Sleiman, A.~Khakpour, M.~Khoueiry, and S.~Hamdar,
+  ``{Motion as Communication: Plan-Conditioned Diffusion World Models for
+  Negotiation at Unprotected Conflict Points},'' in {\em \venue{vIROS}{IROS}
+  2026 Workshop on Bridging the Gap between Neural and Symbolic World Models
+  for Robot Planning, Reasoning, and Action (RoBoWoMo)}, 2026.
+\newblock \href{https://openreview.net/forum?id=pYTJAUmeKJ}{[Paper]}.
+
+\bibitem{Khoueiry2026Bridging}
+M.~S. Khoueiry, P.~*\textbf{Beigi}, A.~Talebpour, and S.~H. Hamdar, ``{Bridging
+  Perception, Planning and Control: A System-Level Validation of a Microscopic
+  Acceleration Model for Longitudinal Autonomous Driving},'' in {\em
+  \venue{vIROS}{IROS} 2026 Workshop on Leveraging Behavioral Models in
+  Human-Autonomy Teams (BEMHAT)}, 2026.
+\newblock \href{https://openreview.net/pdf?id=cyqvgtoDfs}{[Paper]}.
+
+\bibitem{Beigi2026CarFollowingComparison}
+P.~*\textbf{Beigi}, N.~Li, S.~Bafandkar, D.~Monzer, J.~Hourdos, H.~Mahmassani,
+  A.~Talebpour, and S.~Hamdar, ``A data-driven comparison of car-following
+  behaviors of autonomous and human-driven vehicles and their traffic flow
+  impacts under naturalistic traffic conditions,'' in {\em Transportation
+  Research Board Annual Meeting (TRBAM-26-04796)~(\venue{vTRB}{TRB})},
+  (Washington, D.C., USA), January 2026.
+
+\bibitem{Bafandkar2026Learning}
+S.~*Bafandkar, P.~\textbf{Beigi}, N.~Li, J.~Houdros, S.~H. Hamdar, H.~S.
+  Mahmassani, and A.~Talebpour, ``Learning from real-world trajectories: A
+  hybrid genetic algorithm and reinforcement learning approach for vulnerable
+  road user model calibration,'' in {\em Transportation Research Board Annual
+  Meeting (TRBAM-26-04981)~(\venue{vTRB}{TRB})}, (Washington, D.C., USA),
+  January 2026.
+
+\bibitem{Pan2026RoundaboutCalibration}
+D.~*Pan, M.~Haque, A.~P. Nujjetty, P.~\textbf{Beigi}, W.~Zhang, W.~Sleiman, and
+  S.~Hamdar, ``Calibrating traffic models: Analyzing vehicles and vulnerable
+  road users interactions at roundabouts using real-world trajectories,'' in
+  {\em Transportation Research Board Annual Meeting
+  (TRBAM-26-04076)~(\venue{vTRB}{TRB})}, (Washington, D.C., USA), January 2026.
+
+\bibitem{Sleiman2026AdaptiveSignals}
+W.~*Sleiman, T.~Petrov, P.~\textbf{Beigi}, L.~Buzna, P.~Pocta, and S.~Hamdar,
+  ``Adaptive traffic signal control under partial connectivity co-simulation
+  and penetration-aware policy learning,'' in {\em Transportation Research
+  Board Annual Meeting (TRBAM-26-02575)~(\venue{vTRB}{TRB})}, (Washington,
+  D.C., USA), January 2026.
+
+\bibitem{Sleiman2026Hani}
+W.~*Sleiman, P.~\textbf{Beigi}, N.~Li, and Y.~Zhang, ``A lifelong devotion to
+  transportation research: Hani's contribution in numbers,'' in {\em Memorial
+  and Tribute for Professor Hani S. Mahmassani in Transportation Research Board
+  Annual Meeting~(\venue{vTRB}{TRB})}, (Washington, D.C., USA), January 2026.
+
+\bibitem{sleiman2025percolationconf}
+W.~*Sleiman, P.~\textbf{Beigi}, and S.~Hamdar, ``{Percolation-Based Cloud
+  Computing Framework for Network Reliability Assessment},'' in {\em IEEE 4th
+  Int. Conf. on Computing and Machine Intelligence~(\venue{vICMI}{IEEE ICMI})},
+  (Mount Pleasant, MI, USA), April 2025.
+
+\bibitem{Sleiman2025HighFidelityRL}
+W.~*Sleiman, P.~\textbf{Beigi}, T.~Petrov, L.~Buzna, P.~Pocta, and S.~Hamdar,
+  ``High fidelity simulation framework for deep reinforcement learning control:
+  Impact of connected pedestrian and vehicle penetration rates on intersection
+  signalization performance,'' in {\em Transportation Research Board Annual
+  Meeting (TRBAM-25-04809)~(\venue{vTRB}{TRB})}, (Washington, D.C., USA),
+  January 2025.
+
+\bibitem{Pan2025AllWayStopSafety}
+D.~*Pan, P.~\textbf{Beigi}, S.~Hamdar, W.~Zhang, and W.~Sleiman, ``Leveraging
+  naturalistic trajectory data for safety analysis of all-way stop control
+  intersections: Exploration speed limit and stop violations patterns,'' in
+  {\em Transportation Research Board Annual Meeting
+  (TRBAM-25-05015)~(\venue{vTRB}{TRB})}, (Washington, D.C., USA), January 2025.
+
+\bibitem{Khoueiry2025LebanonFreeway}
+M.~*Khoueiry, M.~Haque, P.~\textbf{Beigi}, A.~Talebpour, and S.~Hamdar,
+  ``Non-lane-based acceleration behavior on a freeway in jounieh, lebanon: From
+  aerial trajectory extraction to model calibration,'' in {\em Transportation
+  Research Board Annual Meeting (TRBAM-25-05607)~(\venue{vTRB}{TRB})},
+  (Washington, D.C., USA), January 2025.
+
+\bibitem{Beigi2025IDMCalibration}
+P.~*\textbf{Beigi}, M.~Haque, W.~Sleiman, J.~Hourdos, H.~Mahmassani,
+  A.~Talebpour, and S.~Hamdar, ``Calibrating car-following behaviors for
+  automated and human-driven vehicles under naturalistic traffic conditions:
+  Intelligent driver model parametric differences,'' in {\em Transportation
+  Research Board Annual Meeting (TRBAM-25-06282)~(\venue{vTRB}{TRB})},
+  (Washington, D.C., USA), January 2025.
+
+\bibitem{Beigi2024HeavyVehicleHeadways}
+P.~*\textbf{Beigi}, S.~H. Hamdar, R.~Ammourah, A.~Talebpour, and H.~Mahmassani,
+  ``The impact of heavy vehicles on headway distributions: A study using
+  naturalistic urban expressway trajectories,'' in {\em Transportation Research
+  Board Annual Meeting (TRBAM-24-04398)~(\venue{vTRB}{TRB})}, (Washington,
+  D.C., USA), January 2024.
+
+\bibitem{Pan2024RoundaboutCalibration}
+D.~*Pan, P.~\textbf{Beigi}, S.~Hamdar, W.~Sleiman, and W.~Zhang, ``Calibrating
+  traffic models: Analyzing vehicles and vulnerable road users interactions at
+  roundabouts using real-world trajectories,'' in {\em \venue{vTRB}{TRB} 7th
+  International Conference on Roundabouts and Geometric Design (Lectern
+  Session: Designing for Pedestrians and Bicyclists)}, (Atlanta, GA, USA), June
+  2024.
+
+\bibitem{Pan2024ITEBigDataLOS}
+P.~*\textbf{Beigi}, D.~Pan, S.~Hamdar, and W.~Zhang, ``Big data analysis for
+  los extraction through naturalistic trajectories: A shrp2 study for
+  signalized intersections,'' in {\em 2024 Joint \venue{vITE}{ITE}
+  International \& Mid-Colonial District Annual Meeting (Session: Traffic
+  Analysis Approaches for Intersections and Networks)}, (Philadelphia, PA,
+  USA), July 2024.
+
+\bibitem{Ammourah2023TGSIM}
+R.~Ammourah, P.~\textbf{Beigi}, B.~Fan, S.~H. Hamdar, R.~James,
+  M.~Khajeh-Hosseini, H.~Mahmassani, D.~Monzer, and A.~*Talebpour,
+  ``Introduction to the third generation simulation (tgsim) dataset: Data
+  collection and trajectory extraction,'' in {\em Transportation Research Board
+  Annual Meeting (TRBAM-23-03535)~(\venue{vTRB}{TRB})}, (Washington, D.C.,
+  USA), January 2023.
+
+\bibitem{Fan2023HybridCFModel}
+B.~*Fan, R.~Ammourah, P.~\textbf{Beigi}, S.~H. Hamdar, H.~Mahmassani, and
+  A.~Talebpour, ``Formulation and calibration of a hybrid car-following model
+  for automatic cruise controlled cars in actual highway traffic,'' in {\em
+  Transportation Research Board Annual Meeting
+  (TRBAM-23-04567)~(\venue{vTRB}{TRB})}, (Washington, D.C., USA), January 2023.
+
+\bibitem{Beigi2023VideographyHeadways}
+P.~*\textbf{Beigi}, S.~H. Hamdar, B.~Fan, R.~Ammourah, A.~Talebpour, and H.~S.
+  Mahmassani, ``From videography to traffic analysis: Exploring the heavy
+  vehicle impact on headway distributions using extracted high resolution
+  trajectory data on a washington dc expressway,'' in {\em Transportation
+  Research Board Annual Meeting (TRBAM-23-04343)~(\venue{vTRB}{TRB})},
+  (Washington, D.C., USA), January 2023.
+
+\end{thebibliography}

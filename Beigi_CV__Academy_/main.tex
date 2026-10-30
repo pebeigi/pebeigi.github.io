@@ -1,0 +1,618 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[utf8]{inputenc} % Added for better encoding support
+\usepackage{xcolor} % For custom colors
+
+% Define custom colors for icons
+\definecolor{linkedin}{HTML}{0A66C2}     % LinkedIn blue
+\definecolor{git}{HTML}{181717}          % GitHub black
+\definecolor{scholar}{HTML}{4285F4}      % Google Scholar / Google blue
+\definecolor{researchgate}{HTML}{00CCBB} % ResearchGate teal
+\definecolor{orcid}{HTML}{A6CE39}        % ORCID green
+\definecolor{wos}{HTML}{F36C00}          % Clarivate / Web of Science orange
+\definecolor{email}{HTML}{EA4335}        % Gmail red
+\definecolor{phone}{HTML}{34A853}        % phone / Google green accent
+\definecolor{awarded}{HTML}{006400}
+
+% ========== Venue colors (publications) ==========
+% Master switch: \venueColorsfalse forces every venue back to black.
+% Or set any \definecolor below to HTML{000000} individually.
+\newif\ifvenueColors
+\venueColorstrue
+
+% Only the short tags below are colored in the PDF; full venue names stay black.
+% Short tags in bibliography.bib: TRB, TRR, TR-C, IEEE T-ITS, IEEE VTC, IEEE ICMI, IROS, ITE, INFORMS, CSCE
+\definecolor{vTRB}{HTML}{000000}      % TRB / TRR (black)
+\definecolor{vIROS}{HTML}{E67E22}     % IROS (orange)
+\definecolor{vTRC}{HTML}{C2185B}      % TR-C (magenta — high contrast)
+\definecolor{vTITS}{HTML}{C0392B}     % IEEE T-ITS (red)
+\definecolor{vINFORMS}{HTML}{1E8449}  % INFORMS (green)
+\definecolor{vICMI}{HTML}{1ABC9C}     % IEEE ICMI (teal)
+\definecolor{vVTC}{HTML}{D35400}      % IEEE VTC (burnt orange)
+\definecolor{vCSCE}{HTML}{2C3E50}     % CSCE (slate)
+\definecolor{vITE}{HTML}{B9770E}      % ITE
+
+\newcommand{\venue}[2]{%
+  \ifvenueColors\textcolor{#1}{#2}\else#2\fi
+}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+
+\usepackage{enumitem}
+\usepackage[colorlinks = true,
+            linkcolor = red,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage[numbers]{natbib}
+\usepackage{bibentry}
+\nobibliography*
+\usepackage{comment}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\hypersetup{pdfborder = 0 0 0}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.65in}
+\addtolength{\textheight}{1.15in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{+3pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{+3pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{+1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\[2pt]   % <-- add space here
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-2pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\doiLink}[1]{\href{https://doi.org/#1}{[DOI]}}
+\newcommand{\codeLink}[1]{\href{#1}{[Code]}}
+\newcommand{\dataLink}[1]{\href{#1}{[Data]}}
+\newcommand{\arxivLink}[1]{\href{#1}{[arXiv]}}
+\newcommand{\tridLink}[1]{\href{#1}{[TRID]}}
+\newcommand{\bookletLink}[1]{\href{#1}{[Booklet]}}
+
+\begin{document}
+\bibliographystyle{ieeetr}
+\nobibliography{bibliography}
+
+\vspace{-485pt}
+
+\begin{center}
+  {\color{red}\bfseries\small Authorized to work in the U.S. without restrictions.} \\
+  {\small No sponsorship or visa-based work authorization (CPT, OPT, H-1B, or otherwise) required.} \\[4pt]
+    {\Huge \scshape \textbf{Pedram Beigi, \LARGE{PhD}}} \\ \vspace{4pt}
+    \small
+    \raisebox{-0.1\height}{\textcolor{phone}{\faPhone}}~\textcolor{black}{(202) 258-6481} ~
+    \href{mailto:beigi@gwu.edu}{\textcolor{email}{\faEnvelope}~\textcolor{black}{beigi@gwu.edu}} ~
+    \href{https://www.linkedin.com/in/pedrambeigi/}{\textcolor{linkedin}{\faLinkedin}~\textcolor{black}{LinkedIn}} ~
+    \href{https://github.com/pebeigi}{\textcolor{git}{\faGithub}~\textcolor{black}{GitHub}} ~
+    \href{https://scholar.google.com/citations?user=n1b1vOMAAAAJ&hl=en&oi=ao}{\textcolor{scholar}{\faGraduationCap}~\textcolor{black}{Scholar}} ~
+\end{center}
+
+% adjust vscape based on the space you want to leave between each section.
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+\resumeSubHeadingListStart
+    \resumeSubheading
+      {The George Washington University}{Sep 2021 -- Dec 2026}
+      {Ph.D., Transportation Engineering (AI, Robotics and AVs)}{GPA: 3.9/4}
+    \resumeSubSubheading
+      {\parbox[t]{1\textwidth}{Dissertation: Tactical and Operational Utility-Based Decision-Making Modeling: from Heterogeneous Surface Traffic to Urban Air Mobility, Advisor: Samer Hamdar}}{}
+
+    \vspace{+4pt}
+    \resumeSubheading
+      {Sharif University of Technology}{Sep 2016 -- Feb 2021}
+      {B.Sc., Transportation Engineering}{GPA: 3.8/4}
+\resumeSubHeadingListEnd
+
+
+%-----------RESEARCH EXPERIENCE-----------
+\section{RESEARCH EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {University of Illinois Urbana-Champaign}{Urbana, IL} 
+      {Research Intern}{May 2026 -- Aug 2026}
+      
+    \resumeItemListStart
+        \resumeItem {Worked with Prof. Talebpour on developing advanced approaches including foundation models, vision-language architectures, diffusion models, imitation learning, and reinforcement learning, leveraging large-scale driving data.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {The George Washington University}{Washington, DC} 
+      {Graduate Researcher}{Sep 2021 -- Dec 2026}
+      
+    \resumeItemListStart
+        \resumeItem {Developed multi-agent reinforcement learning (MARL) frameworks for AV coordination and negotiation in dynamic partially observable environments using CTDE framework with multi-agent PPO actor-critic models. Applied Bayesian optimization and genetic algorithms for the models' calibration.}
+        \resumeItem {Led creation of an integrated simulation-AI pipeline combining SUMO, CARLA, and Python APIs for closed-loop decision-making experiments using real-time data (trajectory) streaming using twelve 5G-connected cameras.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Federal Highway Administration \footnotesize(Turner Fairbank Research Center, Saxton Lab)}{McLean, VA}
+      {Lead Researcher, Next Generation Modeling for CAVs {\footnotesize(Grant ID: 693JJ324C000004)}}{Feb 2024 -- Present}
+      
+    \resumeItemListStart
+        \resumeItem {Leading development of trajectory generation models for ADAS (using physics-based, DL-based and RL-based frameworks), and integrating AV behavior models into large-scale microsimulation (SUMO) tools, in collaboration with UIUC and Northwestern University.}
+        
+    \resumeItemListEnd
+    \vspace{-23pt}
+    \resumeSubheading
+      {}{}
+      {Research Assistant, Automated Vehicles for All {\footnotesize(Grant ID: 693JJ319NF00001)}}{Sep 2023 -- Aug 2024}
+      
+    \resumeItemListStart
+        \resumeItem {Developed and validated perception (sensor fusion, detection, segmentation) and planning (map generalization, localization) algorithms using LiDAR, radar, and video data for enhanced AV situational awareness and mixed-traffic simulation, in collaboration with Texas A\&M, UIUC, UC Davis, NVIDIA and GM.}
+    \resumeItemListEnd
+    \vspace{-23pt}
+    \resumeSubheading
+      {}{}
+      {Research Assistant, Third Generation Simulation (TGSIM) Data {\footnotesize (Grant ID: 693JJ321C000001)}}{Sep 2021 -- Jul 2023}
+      
+    \resumeItemListStart
+        \resumeItem {Developed computer vision pipelines to collect large-scale trajectory data (11,000+ vehicle-kilometers) for AV–human interactions, enabling trajectory extraction and motion prediction for AV research.}
+    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\vspace{-18pt}
+%-----------TEACHING EXPERIENCE-----------
+\section{TEACHING EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {The George Washington University}{}
+      {Lecturer / TA for CE 1010 (CRN:52745) Intro to Civil Engineering}{Fall 2026}
+      
+      \resumeItemListStart
+        \resumeItem{Delivered introductory lectures on civil engineering disciplines, transportation systems, and engineering problem-solving; led lab/recitation sessions and graded assignments for first-year engineering students.}
+    \resumeItemListEnd
+    \vspace{-15pt}
+    \resumeSubheading
+      {}{}
+      {Lecturer / TA for SEAS 1001 (CRN:55178) Engineering Orientation}{Fall 2026}
+      
+      \resumeItemListStart
+        \resumeItem{Led orientation lectures and discussion sessions introducing SEAS majors, academic pathways, and professional practices; mentored first-year students on course planning and research/career opportunities.}
+    \resumeItemListEnd
+    \vspace{-15pt}
+    \resumeSubheading
+      {}{}
+      {TA for CN:6730 Sustainable Urban Planning}{Spring 2024, Spring 2025, Fall 2025}
+      
+      \resumeItemListStart
+        \resumeItem{Supported classroom instruction by developing learning materials, organizing project workflows, and contributing to course content; advised students during office hours and project reviews on research methods.}
+    \resumeItemListEnd
+    \vspace{-15pt}
+    \resumeSubheading
+      {}{}
+      {TA for CN:4721 Traffic Engineering}{Spring 2025}
+      
+      \resumeItemListStart
+        \resumeItem{Delivered in-person instructional support, including preparing lecture examples, drafting problem sets, coordinating exams, and helping shape course modules related to traffic operations and roadway analysis.}
+    \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
+
+\section{RESEARCH INTERESTS}
+
+My research interests focus on traffic flow theory, behavior modeling, CAVs, simulation, machine learning, and computer vision to enhance safety, efficiency, and resilience in transportation systems:
+
+\begin{itemize}
+    \item \textbf{Machine Learning and Artificial Intelligence:} Developing deep reinforcement learning architectures, including multi-agent reinforcement learning, foundation models, vision-language models, diffusion models, and imitation learning for autonomous driving applications.
+    
+    \item \textbf{Automated Driving Systems (ADS) and Trajectory Planning:} Designing perception, prediction, and planning pipelines for autonomous vehicles using multi-sensor fusion. Focus areas include generating trajectory models for ADAS and enhancing situational awareness in mixed-traffic environments.
+    
+    \item \textbf{Traffic Flow Theory and Traffic Simulation:} Macroscopic and microscopic traffic flow analysis, integrating data-driven and physics-based behavior models into large-scale microsimulation tools. Building integrated simulation pipelines for closed-loop decision-making using real-time data streaming.
+    
+    \item \textbf{Computer Vision and Large-Scale Data Modeling:} Engineering computer vision pipelines to extract large-scale trajectory data for AV-human interaction modeling and motion prediction. Utilizing multi-modal deep learning time-series models to monitor driver behavior and deploy real-time IoT alerts.
+    
+    \item \textbf{Transportation Operations and Safety Optimization:} Applying Bayesian optimization, genetic algorithms, and reinforcement learning to calibrate traffic models and evaluate vulnerable road user behavior. Analyzing the impact of V2X connectivity on intersection performance and overall network reliability.
+\end{itemize}
+
+%-----------PROPOSAL WRITING-----------
+\section{PROPOSAL WRITING EXPERIENCE}
+\resumeSubHeadingListStart
+
+  % Awarded Project
+  \resumeSubheading
+    {U.S. Department of Transportation}{}
+    {FHWA Exploratory Advanced Research (EAR) Program, Solicitation No. 693JJ3-24-BAA-0001}{}
+    
+    \resumeItemListStart
+      \resumeItem{Title: New Generation Models for Connected Autonomous Vehicles: NGM-CAV}
+      \resumeItem{Proposer: The George Washington University (Lead), Northwestern University (Subcontractor), University of Illinois Urbana-Champaign (Subcontractor)}
+      \resumeItem{Status: \textcolor{awarded}{Awarded}}
+      \resumeItem{Budget: \textdollar432,717 for the project and \textdollar344,881 allocated to The George Washington University}
+      \resumeItem{Announcement and Synopsis: \href{https://www.highergov.com/contract/693JJ324C000004/}{https://www.highergov.com/contract/693JJ324C000004/}}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+  % Pending and Not Awarded Projects (kept in comment environment)
+\begin{comment}
+    \resumeSubheading
+      {U.S. Department of Transportation}{N/A}
+      {FHWA Exploratory Advanced Research (EAR) Program, Solicitation No. 693JJ3-26-BAA-0002-001}{2024}
+      
+      \resumeItemListStart
+        \resumeItem{Project Title: Digital Twin for Mixed Urban Environment: DT-MUE.}
+        \resumeItem{Proposer: The George Washington University (Lead), Northwestern University (Subcontractor), Texas A\&M University (Subcontractor), University of Illinois Urbana-Champaign (Subcontractor).}
+        \resumeItem{Status: Pending.}
+        \resumeItem{Budget: \textdollar450,000 allocated to The George Washington University.}
+        \resumeItem{Announcement and Synopsis: \href{https://sam.gov/workspace/contract/opp/2dd0d45c6377464eae7d85b804552323/view}{SAM.gov opportunity link}}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {U.S. Department of Transportation}{N/A}
+      {FHWA Exploratory Advanced Research (EAR) Program, Solicitation No. 693JJ3-24-BAA-0004}{2024}
+      
+      \resumeItemListStart
+        \resumeItem{Project Title: U-CONECT: Urban Cooperative Operation of Networked Entities in a Connected Traffic.}
+        \resumeItem{Proposer: The George Washington University (Lead), Northwestern University (Subcontractor), University of Illinois Urbana-Champaign (Subcontractor).}
+        \resumeItem{Status: Pending.}
+        \resumeItem{Budget: \textdollar786,189 allocated to The George Washington University.}
+        \resumeItem{Announcement and Synopsis: \href{https://www.highergov.com/contract-opportunity/broad-agency-announcement-baa-advancing-cooper-693jj3-24-baa-0004-o-2b07c/#description}{highergov.com contract link}}
+      \resumeItemListEnd
+
+    \newpage
+    \vspace*{6pt}
+      
+    \resumeSubheading
+      {U.S. Department of Transportation}{N/A}
+      {FHWA Exploratory Advanced Research (EAR) Program, Solicitation No. 693JJ324NF00008}{2024}
+      
+      \resumeItemListStart
+        \resumeItem{Project Title: SimPed – Next: Next Generation of Data Supported Pedestrian Simulation and Modeling.}
+        \resumeItem{Proposer: The George Washington University (Lead), University of Illinois Urbana-Champaign (Subcontractor).}
+        \resumeItem{Status: Not Awarded.}
+        \resumeItem{Budget: \textdollar249,888 allocated to The George Washington University.}
+        \resumeItem{Announcement and Synopsis: \href{https://www.highergov.com/grant-opportunity/exploratory-advanced-research-program-353650/}{highergov.com opportunity link}}
+      \resumeItemListEnd
+\end{comment}
+
+
+
+%-----------HONORS AND AWARDS-----------
+
+%-----------INDUSTRY EXPERIENCE-----------
+\begin{comment}
+    
+
+\section{INDUSTRY EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Mead\&Hunt}{May - Aug 2025}
+      {Advanced Mobility Intern}{Washington, DC}
+      \resumeItemListStart
+        \resumeItem{Assisted the lead engineer in citywide traffic signal optimization and timing plan implementation for  DDOT and BCDOT, utilizing Synchro, and signal controller data to enhance corridor coordination and reduce travel times.}
+        \resumeItem{Supported development of traffic simulation and forecasting models for smart mobility and corridor planning projects with WVDOT.}
+        
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Arcadis}{May - Aug 2024}
+      {Transportation Engineer Intern}{Atlanta, GA}
+      \resumeItemListStart
+        \resumeItem{Collaborated with GDOT on concept design, traffic volume and capacity analysis, operational analysis, and the development of a mitigation plan for the I‑285 Express Lanes in Atlanta.}
+        \resumeItem{Conducted meetings with stakeholders, writing reports, and assisting in the preparation of presentations for project reviews and approvals.}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+  
+\end{comment}
+
+
+\section{INDUSTRY EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Mead\&Hunt}{May - Aug 2025}
+      {Advanced Mobility Intern}{Washington, DC}
+      \resumeItemListStart
+        \resumeItem{Assisted the lead engineer in citywide traffic signal optimization and timing plan implementation for DDOT and BCDOT, utilizing Synchro, and signal controller data to enhance corridor coordination and reduce travel times.}
+        \resumeItem{Supported development of traffic simulation and forecasting models for smart mobility and corridor planning projects with WVDOT.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {moment.ai}{Sep - Dec 2024}
+      {Autonomous Vehicle Researcher Intern}{Washington, DC}
+      \resumeItemListStart
+        \resumeItem{Developed multi-modal deep learning time-series models (LSTM/GRU) integrating smartphone and AV sensor data to detect driver behavior and health incident risks, outperforming traditional methods by 9\%.}
+        \resumeItem{Developed a real-time NVIDIA Jetson/mobile driver monitoring system using AWS IoT pipelines and Alexa integration for in-vehicle alerts and control.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Arcadis}{May - Aug 2024}
+      {Transportation Engineer Intern}{Atlanta, GA}
+      \resumeItemListStart
+        \resumeItem{Collaborated with GDOT on concept design, traffic volume and capacity analysis, operational analysis, and the development of a mitigation plan for the I‑285 Express Lanes in Atlanta.}
+        \resumeItem{Conducted meetings with stakeholders, writing reports, and assisting in the preparation of presentations for project reviews and approvals.}
+    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{HONORS AND AWARDS}
+
+\resumeSubHeadingListStart
+    \item 
+        \begin{tabularx}{\textwidth}{Xr}
+            COMTO DC Scholarship & 2026 \\
+            ITE CAPSITE Pat Timbrook Scholarship & 2025 \\
+            ITS Maryland Student Scholarship & 2025 \\
+            FGSS and SEAS Tuition Award, The George Washington University & \\
+            %GRA and Fellowship for Graduate Students, The George Washington University & \\
+        \end{tabularx}
+\resumeSubHeadingListEnd
+
+%-----------Technical Skilss-----------
+
+\section{TECHNICAL SKILLS}
+ \begin{itemize}[leftmargin=0.1in, label={}]
+    \small{\item{
+     \textbf{Programming:}{ Python, ROS, MySQL, Git} \\
+     \vspace{2pt}
+     \textbf{Libraries:}{ PyTorch, Diffusers, Transformers,OpenCV, RLlib, Gymnasium, Scikit-learn, Keras, Ultralytics} \\
+     \vspace{2pt}
+     \textbf{Tools:}{ CARLA, Unity, Power BI, MicroStation, Tableau, SUMO, VISSIM, Synchro, SIDRA} \\
+    }}
+ \end{itemize}
+
+
+%------------Selected Publications-----------
+
+\section{PUBLICATIONS (h-index: 6; Citations: 271)\texorpdfstring{ {\normalfont\large\href{https://scholar.google.com/citations?user=n1b1vOMAAAAJ\&hl=en\&authuser=1}{\textcolor{scholar}{\faGraduationCap}}\hspace{0.45em}\href{https://www.researchgate.net/profile/Pedram-Beigi-3?ev=hdr_xprf}{\textcolor{researchgate}{\faResearchgate}}}}{}}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \setlength{\itemsep}{-1pt} % Adjust line spacing
+
+    \item \bibentry{petrov2026simulation}~\doiLink{10.1016/j.trpro.2025.11.102}
+
+    \item \bibentry{sleiman2026diffusion}~\doiLink{10.1109/TITS.2026.3655561}
+    \item \bibentry{Bafandkar2026learningtrr}~\codeLink{https://github.com/pebeigi/Paper_GA_RL_VRU_Calibration}
+    \item \bibentry{sleiman2025percolation}~\doiLink{10.1109/ICMI65310.2025.11139838}
+    \item \bibentry{beigi2025impact}~\doiLink{10.1177/03611981251324198}~\codeLink{https://github.com/pebeigi/Paper_Impact_of_Heavy_Vehicles_on_Headway}
+
+    \item \bibentry{Pan25092025}~\doiLink{10.1080/23249935.2025.2558149}
+    \item \bibentry{sleiman2025impact}~\doiLink{10.1177/03611981251384965}~\codeLink{https://github.com/wissamsleiman/Deep-Reinforcement-Learning-for-Traffic-Signal-Control}
+    \item \bibentry{ammourah2024introduction}~\doiLink{10.1177/03611981241257257}~\codeLink{https://github.com/ylinzhang12/TGSIM-trajectory-pipeline}~\dataLink{https://catalog.data.gov/dataset/third-generation-simulation-data-tgsim}
+    
+    \item \bibentry{rad2024predicting}~\href{https://www.atsinternationaljournal.com/2024-issues/predicting-freight-attraction-with-multivariate-linear-regression-and-geographically-weighted-regression-using-satellite-nighttime-light-data/}{[DOI]}
+
+    \item \bibentry{faghihinejad2022framework}~\doiLink{10.1155/2022/8781686}
+    
+    \item \bibentry{beigi2022bike}~\doiLink{10.1007/978-3-031-34027-7_48}
+    \item \bibentry{beigi2022station}~\doiLink{10.1007/978-3-031-34027-7_41}
+    
+\end{itemize}
+
+
+
+\section{BOOK CHAPTERS}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \setlength{\itemsep}{-2pt} % Adjust line spacing
+    \item \bibentry{beigi2022overview}~\doiLink{10.1007/978-3-030-97940-9_200}
+    \item \bibentry{rajabi2023drone}~\doiLink{10.1007/978-3-030-97940-9_196}
+\end{itemize}
+
+\section{UNDER REVIEW PUBLICATIONS}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \setlength{\itemsep}{-2pt} % Adjust line spacing
+    \item \bibentry{Beigi2026MotionCommunicationTITS}~\codeLink{https://github.com/pebeigi/MaC-PDWM}
+    \item \bibentry{Beigi2026UtilityGuidedResidual}~\codeLink{https://github.com/pebeigi/U-ResMARL}
+    \item \bibentry{Khoueiry2026WeakLane}~\codeLink{https://github.com/pebeigi/AD-in-Weak-Lane-Traffic}
+    \item \bibentry{Khakpour2026EmpiricalGames}~\arxivLink{https://arxiv.org/abs/2610.32276}~\dataLink{https://catalog.data.gov/dataset/third-generation-simulation-data-tgsim-foggy-bottom-trajectories}
+    \item \bibentry{Hegde2026CompleteStreet}~\arxivLink{https://arxiv.org/abs/2610.27509}
+    \item \bibentry{sleiman2026deep}~\codeLink{https://github.com/pebeigi/PAPL-TSC}
+\end{itemize}
+
+
+
+%-----------Conference submissions (not yet 
+\newpage
+\vspace*{4pt}
+
+\section{CONFERENCE PRESENTATIONS (*presenting author)}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \setlength{\itemsep}{-1pt}
+    \item \bibentry{Beigi2026NGMTRB2027}~\codeLink{https://github.com/pebeigi/NGM}
+    \item \bibentry{Beigi2026OperationsSafetyTRB2027}
+    \item \bibentry{Hegde2026CompleteStreetTRB2027}
+    \item \bibentry{Khakpour2026GameTheoreticTRB2027}
+    \item \bibentry{Rashidi2026InteractionAwareTRB2027}
+
+    \item \bibentry{Beigi2026MotionCommunication}~\codeLink{https://github.com/pebeigi/MaC-PDWM}
+    \item \bibentry{Khoueiry2026Bridging}~\codeLink{https://github.com/pebeigi/AV-SysVal}
+
+    \item \bibentry{Beigi2026CarFollowingComparison}~\doiLink{10.21949/z9f1-m111}
+    \item \bibentry{Bafandkar2026Learning}~\doiLink{10.21949/1qgs-s409}
+    \item \bibentry{Pan2026RoundaboutCalibration}
+    
+    \item \bibentry{Sleiman2026AdaptiveSignals}
+
+    \item \bibentry{Sleiman2026Hani}~\bookletLink{https://transportation.tech.northwestern.edu/docs/trb-memorial-booklet-print.pdf}
+    \item \bibentry{sleiman2025percolationconf}
+    \item \bibentry{Sleiman2025HighFidelityRL}~\tridLink{https://trid.trb.org/View/2646170}~\codeLink{https://github.com/wissamsleiman/Deep-Reinforcement-Learning-for-Traffic-Signal-Control}
+    \item \bibentry{Pan2025AllWayStopSafety}
+    
+    \item \bibentry{Khoueiry2025LebanonFreeway}
+    \item \bibentry{Beigi2025IDMCalibration}
+    \item \bibentry{Beigi2024HeavyVehicleHeadways}~\tridLink{https://trid.trb.org/View/2543459}~\codeLink{https://github.com/pebeigi/Paper_Impact_of_Heavy_Vehicles_on_Headway}
+    \item \bibentry{Pan2024RoundaboutCalibration}
+    \item \bibentry{Pan2024ITEBigDataLOS}
+    \item \bibentry{Ammourah2023TGSIM}~\tridLink{https://trid.trb.org/View/2408338}
+    \item \bibentry{Fan2023HybridCFModel}
+    \item \bibentry{Beigi2023VideographyHeadways}
+
+\end{itemize}
+
+\newpage
+\vspace*{4pt}
+%-----------PROFESSIONAL AFFILIATIONS AND REVIEW ACTIVITIES-----------
+\section{Professional Affiliations and Review Activities \texorpdfstring{\href{https://orcid.org/0000-0002-3020-4085}{\textcolor{orcid}{\large\faOrcid}}\hspace{0.45em}\href{https://www.webofscience.com/wos/author/record/GLT-2885-2022}{\textcolor{wos}{\large\textsf{\textbf{WoS}}}}}{}}
+
+\resumeSubHeadingListStart
+    \item
+        \begin{tabularx}{\textwidth}{Xr}
+            Session Chair, \textit{IEEE Vehicular Technology Conference (VTC)} & International \\
+            Editorial Board Member, \textit{Journal of Future Sustainability} & Canada \\
+            Reviewer, \textit{Conference on Neural Information Processing Systems (NeurIPS)} & International \\
+            Reviewer, \textit{IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)} & International \\
+            Reviewer, \textit{IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)} & United States \\
+            Reviewer, \textit{IEEE Vehicular Technology Conference (VTC)} & International \\
+            Reviewer, \textit{Transportation Research Part C: Emerging technologies} & United Kingdom \\
+            Reviewer, \textit{IEEE Transactions on Intelligent Transportation Systems Journal} & United States \\
+            Reviewer, \textit{Expert Systems With Applications} & United Kingdom \\
+            Reviewer, \textit{Transportmetrica B: Transport Dynamics} & United Kingdom \\
+            Reviewer, \textit{Transportation Planning and Technology Journal} & United Kingdom \\
+            Reviewer, \textit{Traffic Injury Prevention} & United Kingdom \\
+            Reviewer, \textit{Transportation Research Board (TRB)} & United States \\
+            Reviewer, \textit{Transportation Research Record (TRR)} & United States \\
+            Reviewer, \textit{American Journal of Traffic and Transportation Engineering} & United States \\
+            Reviewer, \textit{Journal of Intelligent Transportation Systems} & United Kingdom \\
+            Reviewer, \textit{Canadian Journal of Civil Engineering} & Canada \\
+            Reviewer, \textit{Advances in Transportation Studies Journal} & Italy \\
+            Reviewer, \textit{Transportation Safety and Environment} & United Kingdom \\
+            Reviewer, \textit{Modelling and Simulation in Engineering} & United Kingdom \\
+            Reviewer, \textit{Sustainable Cities and Society} & Netherlands \\
+        \end{tabularx}
+\resumeSubHeadingListEnd
+
+%-----------VOLUNTARY AFFILIATIONS-----------
+
+\section{Voluntary Affiliations}
+\resumeSubHeadingListStart
+    \item
+        \begin{tabularx}{\textwidth}{Xr}
+            Member, Google Developer Student Club at GW & \\
+            President, Institute of Transportation Engineers (ITE) Student Chapter at GW & \\
+            Member, Institute of Electrical and Electronics Engineers (IEEE) & \\
+            Member, Intelligent Transportation Society of Maryland (ITSMD) & \\
+            Member, Conference of Minority Transportation Officials (COMTO) & \\
+        \end{tabularx}
+\resumeSubHeadingListEnd
+
+\newpage
+\vspace*{8pt}
+
+\section{REFERENCES}
+\begin{itemize}
+    \item \textbf{Samer Hamdar, PhD} \\
+    {\small \textit{Professor, Department of Civil and Environmental Engineering}} \\ 
+    {\small \textit{The George Washington University}} \\
+    {\small \textit{Email: \href{mailto:hamdar@gwu.edu}{hamdar@gwu.edu} | Phone: 202-994-6652}}
+
+    \item \textbf{Alireza Talebpour, PhD} \\
+    {\small \textit{Associate Professor, Department of Civil and Environmental Engineering}} \\
+    {\small \textit{University of Illinois Urbana–Champaign}} \\
+    {\small \textit{Email: \href{mailto:ataleb@illinois.edu}{ataleb@illinois.edu} | Phone: 847-644-2870}}
+
+    \item \textbf{Yu (Marco) Nie, PhD} \\
+    {\small \textit{Professor and Roxelyn and Richard Pepper Family Chair}} \\
+    {\small \textit{Department of Civil and Environmental Engineering}} \\
+    {\small \textit{Northwestern University}} \\
+    {\small \textit{Email: \href{mailto:y-nie@northwestern.edu}{y-nie@northwestern.edu} | Phone: 847-467-0502}}
+
+    \item \textbf{Soyoung Ahn, PhD} \\
+    {\small \textit{Professor, Department of Civil and Environmental Engineering}} \\
+    {\small \textit{University of Wisconsin–Madison}} \\
+    {\small \textit{Email: \href{mailto:sue.ahn@wisc.edu}{sue.ahn@wisc.edu} | Phone: 608-265-9067}}
+
+    \item \textbf{Zhengtian Xu, PhD} \\
+    {\small \textit{Assistant Professor, Department of Civil and Environmental Engineering}} \\ 
+    {\small \textit{The George Washington University}} \\
+    {\small \textit{Email: \href{mailto:zhengtian@gwu.edu}{zhengtian@gwu.edu} | Phone: 202-994-0532}}
+
+    \item \textbf{Hesham A. Rakha, PhD} \\
+    {\small \textit{Professor, Charles E. Via Jr. Department of Civil and Environmental Engineering}} \\ 
+    {\small \textit{Courtesy Professor, Bradley Department of Electrical and Computer Engineering}} \\ 
+    {\small \textit{Director, Center for Sustainable Mobility}} \\
+    {\small \textit{Virginia Polytechnic Institute and State University}} \\
+    {\small \textit{Email: \href{mailto:hrakha@vt.edu}{hrakha@vt.edu} | Phone: 540-231-1505}}
+\end{itemize}
+
+\end{document}
